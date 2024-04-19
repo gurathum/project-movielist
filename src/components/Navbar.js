@@ -6,7 +6,7 @@ export default function Navbar() {
     <div className="bg-gray-800">
       <div className="px-2 mx-auto max-w-7xl sm:px-4 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
-          <div className="flex items-center px-2 lg:px-0">
+          <div className="items-center hidden px-2 md:flex lg:px-0">
             <div className="flex-shrink-0">
               <Link to={'/'}>
                 <img
@@ -22,6 +22,12 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
+          <Link
+            to={'/'}
+            className="font-bold text-white md:no-underline md:text-3xl hover:underline"
+          >
+            Project Movie List
+          </Link>
           <Search />
         </div>
       </div>

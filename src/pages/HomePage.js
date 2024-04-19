@@ -36,25 +36,38 @@ const HomePage = () => {
   }, [])
 
   return (
-    <div className="flex flex-col justify-center p-4">
-      <div className="flex items-end justify-between">
-        <h2 className="mb-2 text-4xl font-bold">Popular Movies</h2>
+    <div>
+      <div className="flex flex-col justify-center p-4">
+        <div className="flex items-end justify-between">
+          <h2 className="mb-2 text-4xl font-bold">Popular Movies</h2>
+          {isLoading && <p>Loading...</p>}
+        </div>
+        {error ? (
+          <p>Error fetching movies: {error.message}</p>
+        ) : (
+          <MovieList movies={movies} />
+        )}
+        <div className="flex items-end justify-between">
+          <h2 className="mt-12 mb-2 text-4xl font-bold">Popular TV Shows</h2>
+        </div>
         {isLoading && <p>Loading...</p>}
+        {error ? (
+          <p>Error fetching TV Shows: {error.message}</p>
+        ) : (
+          <MovieList movies={tvShows} />
+        )}
       </div>
-      {error ? (
-        <p>Error fetching movies: {error.message}</p>
-      ) : (
-        <MovieList movies={movies} />
-      )}
-      <div className="flex items-end justify-between">
-        <h2 className="mt-12 mb-2 text-4xl font-bold">Popular TV Shows</h2>
-      </div>
-      {isLoading && <p>Loading...</p>}
-      {error ? (
-        <p>Error fetching TV Shows: {error.message}</p>
-      ) : (
-        <MovieList movies={tvShows} />
-      )}
+      <footer className="py-4 text-center">
+        Created by{' '}
+        <a
+          target="_blank"
+          href="https://github.com/gurathum/project-movielist"
+          rel="noreferrer"
+        >
+          Gurkirat Singh
+        </a>{' '}
+        & Navaneeth PR
+      </footer>
     </div>
   )
 }
