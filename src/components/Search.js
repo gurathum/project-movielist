@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import MyButton from './MyButton'
 
-const API_KEY = 'eea6cf8e79673e103a0a449bc11cf5ef'
+const API_KEY = process.env.API_KEY || process.env.REACT_APP_API_KEY
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState('')

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
 
-const API_KEY = 'eea6cf8e79673e103a0a449bc11cf5ef'
+const API_KEY = process.env.API_KEY || process.env.REACT_APP_API_KEY
 
 const MovieDisplay = () => {
   const [movieData, setMovieData] = useState(null)

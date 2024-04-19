@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import MovieList from '../components/MovieList'
 import axios from 'axios'
-const API_KEY = 'eea6cf8e79673e103a0a449bc11cf5ef'
+const API_KEY = process.env.API_KEY || process.env.REACT_APP_API_KEY
 
 const HomePage = () => {
   const [movies, setMovies] = useState([])
