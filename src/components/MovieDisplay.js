@@ -2,8 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
-
-const API_KEY = process.env.API_KEY || process.env.REACT_APP_API_KEY
+import { API_KEY } from '../config'
 
 const MovieDisplay = () => {
   const [movieData, setMovieData] = useState(null)

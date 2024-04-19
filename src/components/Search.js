@@ -3,8 +3,7 @@ import { Form, InputGroup, FormControl } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import MyButton from './MyButton'
-
-const API_KEY = process.env.API_KEY || process.env.REACT_APP_API_KEY
+import { API_KEY } from '../config'
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState('')
