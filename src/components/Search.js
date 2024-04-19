@@ -42,7 +42,12 @@ export default function Search() {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <MyButton type="submit" variant="primary" disabled={isLoading}>
+          <MyButton
+            onClick={handleSubmit}
+            type="submit"
+            variant="primary"
+            disabled={isLoading}
+          >
             {isLoading ? (
               <svg
                 className="animate-spin h-5 w-5 mr-3 ..."

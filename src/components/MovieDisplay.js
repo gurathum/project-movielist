@@ -58,8 +58,8 @@ const MovieDisplay = () => {
             {genre.name}
           </span>
         ))}
-        <p className="mt-4">{movieData.overview}</p>
-        <p>
+        <p className="mt-4 text-xl">{movieData.overview}</p>
+        <p className="mt-4">
           <FaStar className="inline" /> {movieData.vote_average.toFixed(1)} / 10
         </p>
       </div>
